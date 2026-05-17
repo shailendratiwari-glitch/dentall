@@ -5,7 +5,7 @@ export default function Services() {
   return (
     <div className="services-wrapper">
       <div className="section-header">
-        <span className="tiny-center-tag-dark">CLINICAL CAPABILITIES</span>
+        <h1 className="tiny-center-tag-dark">CLINICAL CAPABILITIES</h1>
         <h2>Comprehensive Dental Disciplines</h2>
       </div>
 

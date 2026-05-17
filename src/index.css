@@ -21,7 +21,7 @@
 
 html {
   /* Enables the strict section-by-section view focus */
-  scroll-snap-type: y mandatory;
+ 
   scroll-behavior: smooth;
 }
 
@@ -30,6 +30,13 @@ body {
   color: var(--color-black);
   background-color: var(--color-white);
   overflow-x: hidden;
+}
+
+img,
+picture,
+video {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Base Utility Classes */
@@ -81,5 +88,15 @@ p {
   
   h3 {
     font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .snap-section {
+    padding: 2rem 1.5rem;
+  }
+
+  body {
+    overflow-x: hidden;
   }
 }

@@ -26,6 +26,11 @@
   font-weight: 400;
 }
 
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
 .nav-links a {
   text-decoration: none;
   font-family: var(--font-body);
@@ -38,4 +43,98 @@
 
 .nav-links a:hover {
   color: var(--color-blue-primary);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-black);
+  margin: 4px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
+    padding: 0 1.5rem;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: min(280px, 80vw);
+    height: calc(100vh - 70px);
+    background-color: var(--color-white);
+    border-left: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: -12px 0 30px rgba(0, 0, 0, 0.08);
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    transition: right 0.3s ease;
+    z-index: 101;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links a {
+    margin: 0;
+    width: 100%;
+    font-size: 1.05rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-overlay {
+    display: block;
+    position: fixed;
+    inset: 70px 0 0 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 100;
+  }
+
+  .nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-bar.menu-open .nav-toggle span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .nav-bar.menu-open .nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-bar.menu-open .nav-toggle span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
 }

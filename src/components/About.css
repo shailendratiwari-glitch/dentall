@@ -1,79 +1,157 @@
+/* ==========================================================================
+   About Section Styles - Premium Aesthetic
+   ========================================================================== */
+
 .about-wrapper {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 5rem 0.75rem; /* Added padding so content doesn't hit screen edges */
 }
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.1fr 0.9fr; /* Gives slightly more visual weight to the image side */
   gap: 5rem;
   align-items: center;
 }
 
+/* --- Image Side & Overlay --- */
 .about-image-side {
+  position: relative; /* Context for absolute positioning of overlay card */
   width: 100%;
-  height: 480px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  height: 520px; /* Slightly taller for a more dramatic, premium presence */
+  border-radius: 16px; /* Smooth, modern clipped corners */
   overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06); /* Premium soft depth */
+  border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
 .about-image-side img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(20%);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); /* Ultra-smooth zoom effect */
 }
 
+/* Subtle image interaction on hover */
+.about-image-side:hover img {
+  transform: scale(1.04);
+}
+
+/* Floating overlay card styling */
+.image-overlay-card {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px); /* Premium iOS-style frosted glass effect */
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  z-index: 2;
+}
+
+.overlay-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--color-black);
+  margin: 0 !important; /* Overrides default paragraph margins */
+}
+
+/* --- Text Side & Typography --- */
 .tiny-center-tag-left {
   display: block;
-  font-size: 0.75rem;
+  font-size: 2.25rem;
   letter-spacing: 3px;
-  font-weight: 700;
+  font-weight: 900;
   color: var(--color-blue-primary);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  text-align: center;
+  text-decoration: underline var(--color-blue-primary) 2px;
+  padding-top: 2.75rem;
 }
+
 
 .about-text-side h2 {
-  font-size: 2.5rem;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
+  font-size: 2.75rem; /* Slightly larger heading for elite editorial feel */
+  line-height: 1.25;
+  margin-bottom: 1.75rem;
   color: var(--color-black);
+  font-weight: 700;
 }
 
-.about-text-side p {
+.about-description p {
   color: var(--color-text-muted);
-  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.65; /* Better readability breathing room */
+  margin-bottom: 1.25rem;
 }
 
+/* --- Stats Row --- */
 .about-stat-line {
   display: flex;
-  gap: 3rem;
-  margin-top: 2rem;
+  gap: 3.5rem;
+  margin-top: 2.5rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .stat-num {
   display: block;
-  font-family: var(--font-heading);
-  font-size: 2rem;
-  font-weight: 600;
+  font-family: var(--font-heading), sans-serif;
+  font-size: 2.5rem; /* Bigger, bolder numbers draw immediate client confidence */
+  font-weight: 700;
   color: var(--color-blue-primary);
+  line-height: 1;
 }
 
 .stat-label {
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--color-black);
+  color: var(--color-text-muted); /* Multi-tone grey yields a cleaner layout hierarchy */
+  letter-spacing: 0.2px;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .about-grid {
+    gap: 3rem;
+  }
+  .about-text-side h2 {
+    font-size: 2.25rem;
+  }
 }
 
 @media (max-width: 768px) {
+  .about-wrapper {
+    padding: 3rem 1.25rem;
+  }
   .about-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Stack vertically on tablet/mobile */
     gap: 2.5rem;
   }
   .about-image-side {
-    height: 300px;
+    height: 360px; /* Comfortable height for mobile viewing */
+  }
+  .image-overlay-card {
+    bottom: 1.25rem;
+    left: 1.25rem;
+    padding: 0.75rem 1.25rem;
+  }
+  .about-stat-line {
+    gap: 2rem;
+    flex-wrap: wrap; /* Prevents stats from overflowing on narrow phone screens */
   }
 }

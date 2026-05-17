@@ -2,34 +2,66 @@ import React from 'react';
 import './About.css';
 
 export default function About() {
+  // Keeping data separate makes the code cleaner and easier to maintain or update later
+  const clinicStats = [
+    {
+      number: "15+",
+      label: "Years of Excellence"
+    },
+    {
+      number: "10k+",
+      label: "Happy Smiles Delivered"
+    },
+    {
+      number: "100%",
+      label: "Patient Satisfaction"
+    }
+  ];
+
   return (
-    <div className="about-wrapper">
+    <section className="about-wrapper" aria-labelledby="about-heading">
+                <h1 className="tiny-center-tag-left">ABOUT OUR CLINIC</h1>
+
       <div className="about-grid">
+
+        
+        {/* Visual Content Column */}
         <div className="about-image-side">
-          <img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=2070" alt="Clinic Research Laboratory" />
+          <div className="image-overlay-card">
+            <p className="overlay-text">State-of-the-Art Dental Care</p>
+          </div>
+          <img 
+            src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070" 
+            alt="Modern dental operatory with advanced equipment" 
+            loading="lazy"
+          />
         </div>
         
+        {/* Text Content Column */}
         <div className="about-text-side">
-          <span className="tiny-center-tag-left">INSTITUTIONAL FOUNDATION</span>
-          <h2>Our Clinical Ethos and Patient Standard</h2>
-          <p>
-            Founded on the baseline principle of complete diagnostic integrity, our clinic functions less like a retail business and more like a focused clinical ecosystem. We emphasize peer-reviewed procedures and clear treatment plans.
-          </p>
-          <p>
-            By restricting our workflow to evidence-based metrics and high-grade dental technology, we ensure that both of our lead specialists review complicated files together, delivering completely balanced, cross-disciplinary answers.
-          </p>
+          <h2 id="about-heading">Refining Oral Healthcare with Precision and Empathy</h2>
+          
+          <div className="about-description">
+            <p>
+              Built on a foundation of trust and advanced clinical expertise, our clinic provides a comprehensive, patient-first approach to modern dentistry. We believe that exceptional oral health care relies on precise diagnostics, personalized treatment pathways, and a deeply compassionate environment.
+            </p>
+            <p>
+              By combining state-of-the-art dental technology with evidence-based practices, our team of dedicated specialists ensures every procedure is seamless, transparent, and tailored to your unique needs. From routine wellness to complex restorative care, we are committed to elevating your dental experience.
+            </p>
+          </div>
+
+          {/* Dynamic Stats Row */}
           <div className="about-stat-line">
-            <div>
-              <span className="stat-num">25+</span>
-              <span className="stat-label">Years Combined Experience</span>
-            </div>
-            <div>
-              <span className="stat-num">0%</span>
-              <span className="stat-label">Retail Upcharging Models</span>
-            </div>
+            {clinicStats.map((stat, index) => (
+              <div key={index} className="stat-item">
+                <span className="stat-num">{stat.number}</span>
+                <span className="stat-label">{stat.label}</span>
+              </div>
+            ))}
           </div>
         </div>
+
       </div>
-    </div>
+    </section>
   );
 }

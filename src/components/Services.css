@@ -9,6 +9,21 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
 }
+.section-header {
+  text-align: center;
+}
+.section-header h1.tiny-center-tag-dark {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--color-blue-primary);
+  text-decoration: underline var(--color-blue-primary) 3px;
+  padding-top: 2.75rem;
+}
+.section-header h2 {
+  font-size: 2rem;
+  margin-top: 0.75rem;
+  color: var(--color-black);
+}
 
 .service-card {
   background-color: var(--color-white);
