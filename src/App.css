@@ -1,0 +1,15 @@
+/* App-specific styling */
+main {
+  margin-top: 70px;
+}
+
+/* Ensure consistent spacing across all sections */
+main > section {
+  min-height: 100vh;
+}
+
+/* Button styles for consistency across the app */
+button {
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
