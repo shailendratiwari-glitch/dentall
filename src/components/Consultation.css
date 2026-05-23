@@ -149,3 +149,29 @@
     width: 100%;
   }
 }
+
+@media (max-width: 480px) {
+  .consultation-section {
+    padding: 2.25rem 1.25rem;
+  }
+
+  .consultation-content h2 {
+    font-size: 1.9rem;
+  }
+
+  .consultation-content p {
+    font-size: 0.95rem;
+  }
+
+  .consultation-image {
+    height: 220px;
+  }
+
+  .consultation-features {
+    gap: 1rem;
+  }
+
+  .feature-item {
+    padding: 1.25rem;
+  }
+}

@@ -1,38 +1,52 @@
 import React from 'react';
 import './Services.css';
 
+// TODO: Replace these placeholder paths with your actual extracted asset image paths
+import generalDentistryIcon from '../assets/icons/union 1.png';
+import cosmeticDentistryIcon from '../assets/icons/union 2.png';
+import rootCanalIcon from '../assets/icons/union 3.png';
+import dentalImplantsIcon from '../assets/icons/union 4.png';
+import orthodonticsIcon from '../assets/icons/union 5.png';
+import teethWhiningIcon from '../assets/icons/union 6.png';
+import pediatricDentistryIcon from '../assets/icons/union 7.png';
+import gumCareIcon from '../assets/icons/union 8.png';
+
 export default function Services() {
+  const treatmentsData = [
+    { id: 1, title: 'General Dentistry', icon: generalDentistryIcon },
+    { id: 2, title: 'Cosmetic Dentistry', icon: cosmeticDentistryIcon },
+    { id: 3, title: 'Root Canal Treatment', icon: rootCanalIcon },
+    { id: 4, title: 'Dental Implants', icon: dentalImplantsIcon },
+    { id: 5, title: 'Orthodontics', subtitle: '(Braces & Aligners)', icon: orthodonticsIcon },
+    { id: 6, title: 'Teeth Whitening', icon: teethWhiningIcon },
+    { id: 7, title: 'Pediatric Dentistry', icon: pediatricDentistryIcon },
+    { id: 8, title: 'Gum Care Treatment', icon: gumCareIcon },
+  ];
+
   return (
-    <div className="services-wrapper">
+    <div className="services-wrapper snap-section">
       <div className="section-header">
-        <h1 className="tiny-center-tag-dark">CLINICAL CAPABILITIES</h1>
-        <h2>Comprehensive Dental Disciplines</h2>
+        {/* Rounded Pill Header Badge with connecting underline line */}
+        <span className="treatments-pill-tag">Treatments</span>
+        <span className="section-line"></span>
       </div>
 
       <div className="services-grid">
-        <div className="service-card">
-          <div className="service-icon-frame">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        {treatmentsData.map((item) => (
+          <div key={item.id} className="service-card">
+            <div className="service-icon-container">
+              <img 
+                src={item.icon} 
+                alt={item.title} 
+                className="service-img-asset" 
+              />
+            </div>
+            <h3 className="service-card-title">
+              {item.title}
+              {item.subtitle && <span className="service-card-subtitle">{item.subtitle}</span>}
+            </h3>
           </div>
-          <h3>Preventive Pathology</h3>
-          <p>Advanced microbial screenings, precise structural imaging, and deep diagnostic hygiene protocols engineered to stop decay early.</p>
-        </div>
-
-        <div className="service-card">
-          <div className="service-icon-frame">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          </div>
-          <h3>Maxillofacial Prosthetics</h3>
-          <p>Surgical-grade reconstruction, bio-compatible implant planning, and full-arch restorative options customized to bone structural density.</p>
-        </div>
-
-        <div className="service-card">
-          <div className="service-icon-frame">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/></svg>
-          </div>
-          <h3>Digital Orthodontics</h3>
-          <p>Computer-mapped bite alignment configurations utilizing medical grade invisible physical aligners for predictable corrections.</p>
-        </div>
+        ))}
       </div>
     </div>
   );

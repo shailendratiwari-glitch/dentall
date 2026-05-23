@@ -5,7 +5,7 @@ main {
 
 /* Ensure consistent spacing across all sections */
 main > section {
-  min-height: 100vh;
+  min-height: calc(100vh - 70px);
 }
 
 /* Button styles for consistency across the app */

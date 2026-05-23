@@ -1,146 +1,199 @@
-/* ==========================================================================
-   Footer Component Configuration
-   ========================================================================== */
-
-.footer-section {
-  background-color: #0b111e; /* Rich midnight blue background */
-  color: #94a3b8;            /* Smooth light grey content text */
-  padding: 4rem 2rem 2rem 2rem;
+﻿.footer-section {
   width: 100%;
-  box-sizing: border-box;
+  background-color: #0A192F; /* deep high-fidelity slate navy background */
+  padding: 5rem 8% 0 8%;
+  color: #FFFFFF;
+  font-family: var(--font-body), sans-serif;
 }
 
-.footer-container {
-  max-width: 1200px;
+/* Master row wrapper utilizing space efficiently */
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3.5rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+.footer-col {
+  flex: 1;
+}
+
+/* --- Brand Column Layout --- */
+.brand-col {
+  flex: 1.4; /* Give the branding bit slightly more layout footprint */
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.25rem;
+}
+
+.footer-logo-text {
+  font-family: var(--font-heading), serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: 0.5px;
+}
+
+.footer-tagline {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 2rem;
+  max-width: 340px;
+}
+
+/* --- Mini Navbar Styling --- */
+.footer-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+  color: #007AFF; /* Hover interaction changes link to primary blue */
+}
+
+/* --- Global Sub-Column Headings --- */
+.footer-col h3 {
+  font-family: var(--font-heading), serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 1.75rem;
+  position: relative;
+}
+
+/* --- Hours Column Styling --- */
+.hours-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.hours-list li {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.hours-list li span {
+  font-weight: 600;
+  color: #FFFFFF;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.footer-cta-btn {
+  background-color: transparent;
+  color: #007AFF;
+  border: 1.5px solid #007AFF;
+  padding: 10px 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.footer-cta-btn:hover {
+  background-color: #007AFF;
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+}
+
+/* --- Contact Rows & Custom Blue Icons --- */
+.footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.footer-contact-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Strict professional circular frame for your Blue SVG icons */
+.footer-blue-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: rgba(0, 122, 255, 0.12); /* Clean translucent backdrop mask */
+  color: #007AFF; /* Pure professional asset blue */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.footer-contact-row p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.4;
+}
+
+/* --- Bottom Grounding Bar --- */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
-/* --- Layout Grid Alignment --- */
-.footer-top {
-  display: grid;
-  /* 4 distinct columns configured neatly for a wide header footprint */
-  grid-template-columns: 1.3fr 0.8fr 1fr 1.2fr;
-  gap: 3rem;
-  padding-bottom: 3rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  align-items: flex-start;
-}
-
-/* --- Branding Block --- */
-.footer-branding h3 {
-  font-family: Arial, sans-serif;
-  font-size: 1.4rem;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  margin: 0 0 1rem 0;
-  color: #ffffff;
-}
-
-.footer-branding h3 span {
-  color: #3b82f6; /* Custom brand tint accent */
-  font-weight: 400;
-}
-
-.footer-branding p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* --- Menu & Contact List Architecture --- */
-.footer-links-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-links-group h4,
-.footer-map-column h4 {
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: #ffffff;
-  margin: 0 0 1.25rem 0;
-}
-
-.footer-links-group a {
-  color: #94a3b8;
-  text-decoration: none;
-  font-size: 0.95rem;
-  padding: 0.35rem 0;
-  transition: all 0.2s ease;
-  width: fit-content;
-}
-
-.footer-links-group a:hover {
-  color: #3b82f6;
-  transform: translateX(4px);
-}
-
-.contact-info {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin: 0 0 0.75rem 0;
-}
-
-.contact-info strong {
-  color: #cbd5e1;
-  font-weight: 500;
-}
-
-/* --- The Ultimate Map Overflow Fix --- */
-.footer-map-column {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.footer-map-wrapper {
-  position: relative;
-  width: 100%;      /* Tells the map container to take only what the grid gives it */
-  height: 150px;     /* Professional compact block size */
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.footer-map-wrapper iframe {
-  width: 100% !important;  /* Overrides the hardcoded width="600" html block values */
-  height: 100% !important; /* Overrides the hardcoded height="450" html block values */
-  object-fit: cover;
-}
-
-/* --- Bottom Copyright Footnote --- */
-.footer-bottom {
-  padding-top: 1.5rem;
-  text-align: center;
-}
-
 .footer-bottom p {
-  color: #475569;
   font-size: 0.85rem;
-  margin: 0;
+  color: rgba(255, 255, 255, 0.4);
 }
 
-/* ==========================================================================
-   Responsive Adaptations
-   ========================================================================== */
-
+/* --- Responsive Adjustments --- */
 @media (max-width: 1024px) {
-  .footer-top {
-    grid-template-columns: 1fr 1fr; /* 2x2 grid layout balance on medium screens */
-    gap: 2.5rem;
-  }
-}
-
-@media (max-width: 640px) {
-  .footer-top {
-    grid-template-columns: 1fr;    /* 1 column stack sequence structure for mobile viewport paths */
-    gap: 2rem;
+  .footer-wrapper {
+    flex-direction: column; /* Collapses to stack layout on small tablet viewports */
+    gap: 3rem;
   }
   
-  .footer-map-wrapper {
-    height: 180px; /* Gives the map slightly more visible area on handheld devices */
+  .brand-col {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-section {
+    padding: 4rem 5% 0 5%;
+  }
+  
+  .footer-nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
   }
 }

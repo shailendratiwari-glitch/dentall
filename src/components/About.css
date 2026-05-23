@@ -28,7 +28,7 @@
 }
 
 .about-image-side img {
-  width: 100%;
+  width: 70%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); /* Ultra-smooth zoom effect */
@@ -153,5 +153,27 @@
   .about-stat-line {
     gap: 2rem;
     flex-wrap: wrap; /* Prevents stats from overflowing on narrow phone screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-wrapper {
+    padding: 2.25rem 1rem;
+  }
+
+  .about-text-side h2 {
+    font-size: 2rem;
+  }
+
+  .about-description p {
+    font-size: 0.95rem;
+  }
+
+  .about-image-side {
+    height: 280px;
+  }
+
+  .about-stat-line {
+    gap: 1.25rem;
   }
 }

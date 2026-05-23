@@ -1,0 +1,151 @@
+/* CTA Base Wrapper */
+.cta-section {
+  width: 100%;
+  min-height: 60vh; /* Shorter than full height so it acts as a punchy closer section */
+  background-color: #002244; /* Deep Navy theme matching your branding */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 10%;
+  overflow: hidden;
+}
+
+/* Subtle glowing accent inside the dark block for visual depth */
+.cta-bg-glow {
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 94, 162, 0.15) 0%, rgba(0, 34, 68, 0) 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cta-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Bright contrast badge above heading */
+.cta-pill-tag {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #00A3E0; /* Bright crisp medical blue accent */
+  font-family: var(--font-body), sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 8px 22px;
+  border-radius: 50px;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cta-content h2 {
+  font-family: var(--font-heading), serif;
+  font-size: 2.75rem;
+  color: #FFFFFF;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.cta-content p {
+  font-family: var(--font-body), sans-serif;
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.8); /* Highly legible soft white copy */
+  max-width: 700px;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+/* Action Button Alignments */
+.cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Primary Filled Action Button */
+.cta-primary-btn {
+  font-family: var(--font-body), sans-serif;
+  background-color: #007AFF; /* High contrast energetic primary blue button */
+  color: #FFFFFF;
+  border: none;
+  padding: 14px 38px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px; /* Pillow button format matching your nav guidelines */
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+  transition: all 0.25s ease-in-out;
+}
+
+.cta-primary-btn:hover {
+  background-color: #005EA2;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 122, 255, 0.45);
+}
+
+/* Secondary Outlined Action Button */
+.cta-secondary-btn {
+  font-family: var(--font-body), sans-serif;
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  padding: 13px 34px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.25s ease-in-out;
+}
+
+.cta-secondary-btn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* --- Responsive Adaptations --- */
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 5rem 5%;
+  }
+
+  .cta-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .cta-content p {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .cta-actions {
+    flex-direction: column; /* Stack actions on smaller devices */
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .cta-primary-btn, 
+  .cta-secondary-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

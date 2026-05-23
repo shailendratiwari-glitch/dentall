@@ -1,31 +1,32 @@
 import React from 'react';
 import './Doctors.css';
-
+import maleDoctorImage from '../assets/male1.svg';
+import femaleDoctorImage from '../assets/female2.svg';
 export default function Doctors() {
   return (
     <div className="doctors-wrapper">
       <div className="section-header">
-        <span className="tiny-center-tag-dark">OUR MEDICAL LEADERSHIP</span>
+          <span className="tiny-center-tag-dark">OUR MEDICAL LEADERSHIP</span>
         <h2>World-Class Clinical Experts</h2>
       </div>
       
       <div className="doctors-grid">
         <div className="doctor-card">
           <div className="doctor-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=2070" alt="Doctor One" />
+            <img src={maleDoctorImage} alt="Doctor One" />
           </div>
-          <h3>Dr. Elena Rostova, DDS</h3>
-          <span className="doctor-specialty">Chief of Oral & Maxillofacial Surgery</span>
-          <p>Over 14 years of rigorous clinical expertise specializing in advanced structural implants and reconstructive operations.</p>
+          <h3>Dr. SHIVAM CHATURVEDI</h3>
+          <span className="doctor-specialty">Prosthodontist & Oral Implantologist</span>
+          <p>BDS (BVP, Pune), MIDS (Lucknow) Ex. Asso. Professor, Rama Dental College.</p>
         </div>
 
         <div className="doctor-card">
           <div className="doctor-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=2070" alt="Doctor Two" />
+            <img src={femaleDoctorImage} alt="Doctor Two" />
           </div>
-          <h3>Dr. Marcus Vance, Prosthodontist</h3>
-          <span className="doctor-specialty">Director of Aesthetic & Digital Restorations</span>
-          <p>Alumni of elite dental research networks, leading the clinic's digital smile mapping and complex micro-prosthetics.</p>
+          <h3>Dr. Ankita CHATURVEDI</h3>
+          <span className="doctor-specialty">Prosthodontist & Maxillofacial Prosthetist</span>
+          <p>Ex. Senior Resident, KGMC, Lucknow Ex. Asst. Professor, Rama Dental College.</p>
         </div>
       </div>
     </div>

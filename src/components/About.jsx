@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css';
+import clinicImage from '../assets/CLINIC.png'; // Example of importing a local image
 
 export default function About() {
   // Keeping data separate makes the code cleaner and easier to maintain or update later
@@ -31,7 +32,7 @@ export default function About() {
             <p className="overlay-text">State-of-the-Art Dental Care</p>
           </div>
           <img 
-            src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070" 
+            src={clinicImage} 
             alt="Modern dental operatory with advanced equipment" 
             loading="lazy"
           />

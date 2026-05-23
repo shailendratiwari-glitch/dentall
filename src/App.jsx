@@ -7,6 +7,10 @@ import Doctors from './components/Doctors';
 import Consultation from './components/Consultation';
 import Footer from './components/Footer';
 import ConsultModal from './components/ConsultModal';
+import FAQ from './components/faq';
+import CTA from './components/Cta';
+import Testimonials from './components/Testimonials';
+import './App.css'; 
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -31,13 +35,22 @@ function App() {
         </section>
         <section id="services" className="snap-section">
           <Services />
+          <Testimonials />
         </section>
         <section id="doctors" className="snap-section">
           <Doctors />
         </section>
+        <section id="faq" className="snap-section">
+          <FAQ />
+        </section>
+        <section id="consultation" className="snap-section">
+          <Consultation onOpenModal={() => setShowModal(true)} />
+        </section>
+        <section id="cta" className="snap-section">
+          <CTA />
+        </section>
       </main>
-      <Consultation onOpenModal={() => setShowModal(true)} />
-      <Footer />
+            <Footer />
       <ConsultModal isOpen={showModal} onClose={() => setShowModal(false)} />
     </>
   );

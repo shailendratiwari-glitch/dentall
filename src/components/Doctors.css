@@ -4,6 +4,15 @@
   margin: 0 auto;
 }
 
+/* Ensure this component's header stacks vertically even if a global
+   .section-header rule uses flex elsewhere (e.g., Services.css). */
+.doctors-wrapper .section-header {
+  display: block;
+  text-align: center;
+  gap: 0;
+  align-items: unset;
+}
+
 .section-header {
   text-align: center;
   margin-bottom: 4rem;
@@ -21,6 +30,8 @@
 .section-header h2 {
   font-size: 2.5rem;
   color: var(--color-black);
+  margin: 0; /* remove default top margin so it aligns tightly with the tag */
+  padding-top: 0.15rem; /* subtle visual separation */
 }
 
 .doctors-grid {
@@ -49,6 +60,7 @@
   filter: grayscale(15%);
   transition: transform 0.4s ease;
 }
+
 
 .doctor-card:hover .doctor-image-wrapper img {
   transform: scale(1.03);
@@ -83,5 +95,19 @@
   }
   .doctor-image-wrapper {
     height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .doctors-wrapper {
+    padding: 0 1rem;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .doctor-image-wrapper {
+    height: 240px;
   }
 }
