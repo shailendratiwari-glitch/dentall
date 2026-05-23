@@ -22,9 +22,8 @@ const Navbar = () => {
           <ul className="navbar-links">
             <li><a href="#home" className="active">Home</a></li>
             <li><a href="#services">Treatments</a></li>
-            <li><a href="#treatments">Specialists</a></li>
-            <li><a href="#smile-gallery">Smile Gallery</a></li>
-            <li><a href="#technology">Technology</a></li>
+            <li><a href="#specialist">Specialists</a></li>
+            
             <li><a href="#about">Our Hospital</a></li>
           </ul>
         </div>

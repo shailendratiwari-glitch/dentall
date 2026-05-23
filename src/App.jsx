@@ -6,6 +6,7 @@ import Services from './components/Services';
 import Doctors from './components/Doctors';
 import Consultation from './components/Consultation';
 import Footer from './components/Footer';
+import Specialists from './components/Specialist';
 import ConsultModal from './components/ConsultModal';
 import FAQ from './components/faq';
 import CTA from './components/Cta';
@@ -38,7 +39,12 @@ function App() {
           <Testimonials />
         </section>
         <section id="doctors" className="snap-section">
-          <Doctors />
+          <Doctors /> </section>
+<section id="Specialists" className="snap-section">
+          <Specialists/> 
+
+          
+
         </section>
         <section id="faq" className="snap-section">
           <FAQ />

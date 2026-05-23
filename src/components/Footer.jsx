@@ -20,7 +20,7 @@ export default function Footer() {
           {/* Small Footer Navbar */}
           <nav className="footer-nav">
             <a href="#home">Home</a>
-            <a href="#treatments">Treatments</a>
+            <a href="#services">Treatments</a>
             <a href="#specialists">Specialists</a>
             <a href="#faq">FAQs</a>
           </nav>
@@ -33,7 +33,7 @@ export default function Footer() {
             <li><span>Monday - Saturday:</span> 9:00 AM - 8:30 PM</li>
             <li><span>Sunday:</span> 10:00 AM - 2:00 PM</li>
           </ul>
-          <button className="footer-cta-btn">Book Appointment</button>
+          <a href="#consultation" className="footer-cta-btn">Book Appointment</a>
         </div>
 
         {/* Column 3: Contact details with blue SVG vectors */}

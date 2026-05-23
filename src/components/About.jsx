@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import clinicImage from '../assets/CLINIC.png'; // Example of importing a local image
+import clinicImage from '../assets/CLINIC.svg'; 
 
 export default function About() {
   // Keeping data separate makes the code cleaner and easier to maintain or update later

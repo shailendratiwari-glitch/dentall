@@ -1,0 +1,178 @@
+/* Container Layout Architecture */
+.specialists-section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #FFFFFF; /* High-contrast clean white surface */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 8%;
+}
+
+.specialists-container {
+  width: 100%;
+  max-width: 1200px; /* Reduced from 1440px to prevent 2 cards from stretching too wide horizontally */
+  margin: 0 auto;
+}
+
+/* Header Text Blocks Alignment */
+.specialists-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.spec-pill-tag {
+  background-color: rgba(30, 136, 229, 0.08); /* Translucent brand blue */
+  color: #1E88E5; /* Brand Blue color from your navbar setup */
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 50px;
+  margin-bottom: 1.2rem;
+}
+
+.specialists-header h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5rem;
+  color: #00254D; /* Deep navy tone from clinical layouts */
+  margin-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.specialists-header p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  color: #4A5568;
+  max-width: 620px;
+  line-height: 1.6;
+}
+
+/* --- FIX: Updated from 4-columns to a balanced 2-column Grid --- */
+.specialists-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Generates 2 columns side-by-side */
+  gap: 2.5rem; /* Increased gap slightly to give the wider cards breathing room */
+  width: 100%;
+}
+
+/* Specialist Card Style Frame */
+.specialist-card {
+  background-color: #F8FAFC; /* Softer gray tint behind card fields */
+  border: 1px solid rgba(0, 37, 77, 0.04);
+  border-radius: 12px;
+  padding: 3rem 2.5rem; /* Increased padding slightly to balance the wider card layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  min-height: 340px; /* Balanced height constraint */
+  width: 100%;
+}
+
+/* Card Hover Interactions */
+.specialist-card:hover {
+  background-color: #FFFFFF;
+  transform: translateY(-5px);
+  border-color: rgba(30, 136, 229, 0.25);
+  box-shadow: 0 20px 40px rgba(0, 37, 77, 0.05);
+}
+
+/* Custom Vector Box Setup */
+.spec-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background-color: rgba(30, 136, 229, 0.1);
+  color: #1E88E5; /* Active Brand Blue theme vector color mapping */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  transition: all 0.25s ease;
+}
+
+.specialist-card:hover .spec-icon-box {
+  background-color: #1E88E5;
+  color: #FFFFFF; /* Flips color cleanly during dynamic user hovers */
+}
+
+/* Text Element Internal Hierarchies */
+.spec-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.spec-sub-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #718096;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.spec-info h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.4rem; /* Marginally increased for better text hierarchy in wider cards */
+  font-weight: 600;
+  color: #00254D;
+  margin-bottom: 0.75rem;
+}
+
+.spec-info p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555555;
+  margin-bottom: 2rem;
+  max-width: 90%; /* Keeps text line lengths perfectly readable */
+}
+
+/* Tiny Micro Interaction Links At Base of Cards */
+.spec-action-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #1E88E5;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: gap 0.2s ease;
+}
+
+.spec-action-link svg {
+  transition: transform 0.2s ease;
+}
+
+.specialist-card:hover .spec-action-link svg {
+  transform: translateX(4px); /* Interactive nudge indicator motion on layout grid cards */
+}
+
+/* --- Responsive Breakpoints Logic --- */
+@media (max-width: 768px) {
+  .specialists-section {
+    padding: 4rem 5%;
+  }
+
+  .specialists-header h2 {
+    font-size: 2rem;
+  }
+
+  .specialists-grid {
+    grid-template-columns: 1fr; /* Falls back to 1 column layout on mobile to prevent squishing */
+    gap: 1.5rem;
+  }
+
+  .specialist-card {
+    min-height: auto;
+    padding: 2rem;
+  }
+}

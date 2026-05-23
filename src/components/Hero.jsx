@@ -9,7 +9,7 @@ export default function Hero() {
         <span className="tiny-center-tag">EXCELLENCE IN DENTAL CARE</span>
         <h1>Precision Dentistry, <br /><span className="text-highlight">Tailored For You.</span></h1>
         <p>Experiencing clinical perfection built on a legacy of institutional medical trust and patient-first innovation.</p>
-        <button className="hero-btn">Explore Our Services</button>
+        <a href="#services" className="hero-btn">Explore Our Services</a>
       </div>
     </div>
   );

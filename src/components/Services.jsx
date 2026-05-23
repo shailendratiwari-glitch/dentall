@@ -2,14 +2,14 @@ import React from 'react';
 import './Services.css';
 
 // TODO: Replace these placeholder paths with your actual extracted asset image paths
-import generalDentistryIcon from '../assets/icons/Union 1.png';
-import cosmeticDentistryIcon from '../assets/icons/Union 2.png';
-import rootCanalIcon from '../assets/icons/Union 3.png';
-import dentalImplantsIcon from '../assets/icons/Union 4.png';
-import orthodonticsIcon from '../assets/icons/Union 5.png';
-import teethWhiningIcon from '../assets/icons/Union 6.png';
-import pediatricDentistryIcon from '../assets/icons/Union 7.png';
-import gumCareIcon from '../assets/icons/Union 8.png';
+import generalDentistryIcon from '../assets/icons/Union 1.svg';
+import cosmeticDentistryIcon from '../assets/icons/Union 2.svg';
+import rootCanalIcon from '../assets/icons/Union 3.svg';
+import dentalImplantsIcon from '../assets/icons/Union 4.svg';
+import orthodonticsIcon from '../assets/icons/Union 5.svg';
+import teethWhiningIcon from '../assets/icons/Union 6.svg';
+import pediatricDentistryIcon from '../assets/icons/Union 7.svg';
+import gumCareIcon from '../assets/icons/Union 8.svg';
 
 export default function Services() {
   const treatmentsData = [

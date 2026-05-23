@@ -44,6 +44,7 @@
 
 /* --- Floating Pill Container Layout --- */
 .navbar-spacer {
+  width: 100%;
   display: flex;
   height: 54px;
   justify-content: center;
@@ -66,8 +67,8 @@
 .navbar-links a {
   text-decoration: none;
   color: #4A5568;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 700;
   transition: color 0.2s ease-in-out;
 }
 
